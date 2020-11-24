@@ -34,7 +34,7 @@ function App() {
       <div>
         <div className="textbox">
         <div>Enter string and click "save" to store it in the dataset</div>
-        <textarea placeholder="Enter Strings here" value={props.userStrings.join("\n")} onChange={handleUserStringsChange} />
+        <textarea placeholder="Enter Strings here" value={userStrings.join("\n")} onChange={handleUserStringsChange} />
         </div>
       </div>
 
