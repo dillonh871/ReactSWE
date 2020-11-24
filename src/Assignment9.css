@@ -22,6 +22,7 @@ body {background-color: powderblue;}
     display: "flex"; 
     flex-Direction: "column";
     align-items: "center";
+    width: 90px;
     justify-content: "space-evenly";
 }
 
