@@ -22,8 +22,8 @@ body {background-color: powderblue;}
     display: "flex"; 
     flex-Direction: "column";
     align-items: "center";
-    width: 150px;
-    justify-content: "space-evenly";
+    width: 200px;
+    justify-content: "center";
 }
 
 .textbox{
