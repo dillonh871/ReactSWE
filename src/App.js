@@ -100,8 +100,8 @@ function App() {
           </div>
 
           <div className = "buttons-container">
-            <label> <input type="radio" checked={withReplacement} onClick={handleWithReplacement} /> With Replacement </label>
-            <label> <input type="radio" checked={withoutReplacement} onClick={handleWithOutReplacement} /> Without Replacement </label>
+            <label class="block"> <input type="radio" checked={withReplacement} onClick={handleWithReplacement} /> With Replacement </label>
+            <label class="block"> <input type="radio" checked={withoutReplacement} onClick={handleWithOutReplacement} /> Without Replacement </label>
             <button onClick={handleOnSubmit}> Submit </button>
             <button onClick={handleOnReset}> Restart </button>
           </div>

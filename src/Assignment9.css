@@ -22,7 +22,6 @@ body {background-color: powderblue;}
     display: "flex"; 
     flex-Direction: "column";
     align-items: "center";
-    width: 200px;
     justify-content: "center";
 }
 
@@ -39,6 +38,10 @@ body {background-color: powderblue;}
 }
 
 button {
+    display: block;
+}
+
+.block {
     display: block;
 }
 textarea {
