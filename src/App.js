@@ -31,10 +31,14 @@ function App() {
       <h3>Long Hoang and Faiz Zia</h3>
       </div>
 
-      <div>
-        <div className="textbox">
-        <div>Enter string and click "save" to store it in the dataset</div>
-        <textarea placeholder="Enter Strings here" value={userStrings.join("\n")} onChange={handleUserStringsChange} />
+      <div className="container">
+        <div className="sub-container">
+
+          <div className="textbox-one">
+            <div className="boxone-title">Enter string and click "save" to store it in the dataset</div>
+            <textarea placeholder="Enter Strings here" value={userStrings.join("\n")} onChange={handleUserStringsChange} />
+          </div>
+
         </div>
       </div>
 
