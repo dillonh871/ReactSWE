@@ -17,6 +17,7 @@ function App() {
   const [userStrings, setUserStrings] = useState([""]);
   const [withReplacement, setWithReplacement] = useState(false);
   const [withoutReplacement, setWithoutReplacement] = useState(true);
+  const [chosenString, setChosenString] = useState("");
     // state = { string: false }; //In place of constructor
 
     const handleUserStringsChange = useCallback(
@@ -25,6 +26,29 @@ function App() {
       },
       [setUserStrings]
     );
+
+    function handleOnSubmit() {
+      let userStringArray = [userStrings].filter(str => str != "");
+
+      if(userStringArray.length == 0){
+        alert("No Strings entered!");
+        return;
+      }
+
+      let randomString = userStringArray[Math.floor(Math.random()*userStringArray.length)];
+      setChosenString(randomString);
+
+
+    }
+
+    function handleOnReset() {
+      setUserStrings([""]);
+      setChosenString("");
+    }
+
+    function clearStrings() {
+      setChosenString("")
+    }
 
   return (
     <div className="main">
@@ -37,59 +61,29 @@ function App() {
         <div className="sub-container">
 
           <div className="textbox">
-            <div className="boxone-title">Enter Strings to be chosen</div>
-            <textarea placeholder="Enter Strings here" value={userStrings.join("\n")} onChange={handleUserStringsChange} />
+            <div className="boxone-title">Enter Strings to be chosen
+              <p>Separate multiple strings by new lines.</p>
+            </div>
+            <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
           </div>
 
           <div className="textbox">
-            <div className="box-title">String chosen: </div>
+            <div className="box-title">String chosen: {chosenString} </div>
             <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
             <div>
-              <button > Clear Chosen Strings </button>
+              <button onClick={clearStrings}> Clear Chosen Strings </button>
             </div>
           </div>
 
           <div className = "buttons-container">
-            <label> <input type="radio"  onClick={() => { setWithReplacement(true); setWithoutReplacement(false); }} /> With Replacement </label>
-            <label> <input type="radio"  onClick={() => { setWithReplacement(false); setWithoutReplacement(true); }} /> Without Replacement </label>
-            <button > Submit </button>
-            <button > Restart </button>
+            <label> <input type="radio" checked={withReplacement} onClick={() => { setWithReplacement(true); setWithoutReplacement(false); }} /> With Replacement </label>
+            <label> <input type="radio" checked={withoutReplacement} onClick={() => { setWithReplacement(false); setWithoutReplacement(true); }} /> Without Replacement </label>
+            <button onClick={handleOnSubmit}> Submit </button>
+            <button onClick={handleOnReset}> Restart </button>
           </div>
 
         </div>
       </div>
-
-
-      {/* <div>
-          <form onSubmit={this.mySubmitHandler}>
-              <p>Enter string and click "save" to store it in the dataset</p>
-              <input
-                  id="standard-string"
-                  label="String"
-                  type="text"
-                  onChange={this.myChangeHandler}
-              />
-              <input
-                  type='submit'
-              />
-          </form>
-      </div>
-      <div>
-          <form onSubmit={this.myChooseHandler}>
-              <p>Click here to choose a random string from the dataset</p>
-              <input
-                  type='submit'
-              />
-          </form>
-      </div>
-      <div>
-          <form onSubmit={this.myClearHandler}>
-              <p>Click here to clear the dataset</p>
-              <input
-                  type='submit'
-              />
-          </form>
-      </div> */}
 
       <div>
         <h1 className="collab">Collaboration Summary</h1>
