@@ -47,7 +47,7 @@ function App() {
 
       if (withoutReplacement) {
         let replacedArray = userStringArray;
-        delete replacedArray[randomStringIndex];
+        replacedArray.splice(randomStringIndex, 1); 
         setWrittenStrings(replacedArray);
       }
 
