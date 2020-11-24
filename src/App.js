@@ -1,5 +1,7 @@
 import React from 'react';
+import './Assignment9.css'
 import {Component} from 'react';
+import { useState } from 'react';
 
 
 // class RegularClass{}
@@ -33,41 +35,44 @@ class App extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <h1>Assignment 9</h1>
-                <div>
-                    <form onSubmit={this.mySubmitHandler}>
-                        <p>Enter string and click "save" to store it in the dataset</p>
-                        <input
-                            id="standard-string"
-                            label="String"
-                            type="text"
-                            onChange={this.myChangeHandler}
-                        />
-                        <input
-                            type='submit'
-                        />
-                    </form>
-                </div>
-                <div>
-                    <form onSubmit={this.myChooseHandler}>
-                        <p>Click here to choose a random string from the dataset</p>
-                        <input
-                            type='submit'
-                        />
-                    </form>
-                </div>
-                <div>
-                    <form onSubmit={this.myClearHandler}>
-                        <p>Click here to clear the dataset</p>
-                        <input
-                            type='submit'
-                        />
-                    </form>
-                </div>
-            </div>
-        )
+      return (
+        <div className="main">
+          <div className="title">
+          <h1>Assignment 9</h1>
+          <h3>Long Hoang and Faiz Zia</h3>
+          </div>
+          <div>
+              <form onSubmit={this.mySubmitHandler}>
+                  <p>Enter string and click "save" to store it in the dataset</p>
+                  <input
+                      id="standard-string"
+                      label="String"
+                      type="text"
+                      onChange={this.myChangeHandler}
+                  />
+                  <input
+                      type='submit'
+                  />
+              </form>
+          </div>
+          <div>
+              <form onSubmit={this.myChooseHandler}>
+                  <p>Click here to choose a random string from the dataset</p>
+                  <input
+                      type='submit'
+                  />
+              </form>
+          </div>
+          <div>
+              <form onSubmit={this.myClearHandler}>
+                  <p>Click here to clear the dataset</p>
+                  <input
+                      type='submit'
+                  />
+              </form>
+          </div>
+      </div>
+      )
     }
 }
 
