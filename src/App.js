@@ -1,6 +1,6 @@
 import React from 'react';
 import './Assignment9.css'
-import {Component} from 'react';
+//import {Component} from 'react';
 import { useState } from 'react';
 
 
@@ -13,7 +13,7 @@ import { useState } from 'react';
 // console.log('regularCLassInstance', regularClassInstance);
 // console.log('componentCLassInstance', componentCLassInstance);
 
-class App extends Component {
+function App() {
     state = { string: false }; //In place of constructor
 
     mySubmitHandler = (event) => {
@@ -34,8 +34,7 @@ class App extends Component {
         //CLEAR THE STORED
     }
 
-    render() {
-      return (
+    return (
         <div className="main">
           <div className="title">
           <h1>Assignment 9</h1>
@@ -85,8 +84,7 @@ class App extends Component {
           </div>
 
         </div>
-      )
-    }
+      );
 }
 
 export default App;
