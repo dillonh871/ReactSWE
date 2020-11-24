@@ -82,7 +82,7 @@ function App() {
 
           <div className="textbox">
             <div className="box-title">String chosen: {chosenString} </div>
-            <textarea value={stringList} />
+            <textarea readonly value={stringList} />
             <div>
               <button onClick={clearStrings}> Clear Chosen Strings </button>
             </div>
