@@ -37,6 +37,9 @@ body {background-color: powderblue;}
     text-align: center;
 }
 
+button {
+    display: block;
+}
 textarea {
     align-items: center;
     display: flex;
