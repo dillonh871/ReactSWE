@@ -27,6 +27,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 200px;
+    height: 450px;
 }
 
 .box-title{
@@ -38,6 +40,7 @@ textarea {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 500px;
+    width: 150px;
+    height: 400px;
+    overflow: auto;
 }

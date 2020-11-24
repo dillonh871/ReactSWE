@@ -75,9 +75,7 @@ function App() {
         <div className="sub-container">
 
           <div className="textbox">
-            <div className="boxone-title">Enter Strings to be chosen
-              <p>Separate multiple strings by new lines.</p>
-            </div>
+            <div className="boxone-title">Enter Strings to be chosen.<br>Separate multiple strings by new lines.</br></div>
             <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
           </div>
 
