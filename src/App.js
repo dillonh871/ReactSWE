@@ -3,9 +3,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import './App.css';
-import Fetcher from './components/Fetcher';
-import Hooks, {aFunc} from './components/Hooks';
-import ToggleButtons from './components/ToggleButtons';
 
 const publicURL = 'https://swe432tomcat.herokuapp.com';
 export const getLocationUrlData = () => {
@@ -20,34 +17,60 @@ export const getLocationUrlData = () => {
 export const servicePath ='/echo';
 
 function App(props) {
-  const [weekDay, setWeekDay] = React.useState("Monday");
-  return (
-    <div style={{flexGrow: 1}}>
-      <Grid 
-      container
-      direction="column"
-      justify="center"
-      alignItems="stretch"
-      spacing={2}
-      >
-        <Grid item xs>
-          <Paper elevation={1}>
-            <Hooks name={aFunc().name}/>
-            </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper elevation={1}>
-            <Fetcher  value={weekDay} url={`${getLocationUrlData().url}${servicePath}`}/>
-            </Paper>
-          </Grid>
-        <Grid item xs>
-          <Paper elevation={1}>
-            <ToggleButtons value={weekDay} onChange ={setWeekDay}/>
-          </Paper>
-          </Grid>
-      </Grid>
-    </div>
-  );
+  mySubmitHandler = (event) => {
+    event.preventDefault();
+    alert("You are saving " + this.state.string);
+}
+myChangeHandler = (event) => {
+    this.setState({ string: event.target.value });
+    //SAVE STRINGS
+}
+myChooseHandler = (event) => {
+    event.preventDefault();
+    //CHOOSE RANDOM
+}
+myClearHandler = (event) => {
+    event.preventDefault();
+    alert("You have cleared the dataset");
+    //CLEAR THE STORED
+}
+
+render() {
+    return (
+        <div>
+            <h1>Assignment 9</h1>
+            <div>
+                <form onSubmit={this.mySubmitHandler}>
+                    <p>Enter string and click "save" to store it in the dataset</p>
+                    <input
+                        id="standard-string"
+                        label="String"
+                        type="text"
+                        onChange={this.myChangeHandler}
+                    />
+                    <input
+                        type='submit'
+                    />
+                </form>
+            </div>
+            <div>
+                <form onSubmit={this.myChooseHandler}>
+                    <p>Click here to choose a random string from the dataset</p>
+                    <input
+                        type='submit'
+                    />
+                </form>
+            </div>
+            <div>
+                <form onSubmit={this.myClearHandler}>
+                    <p>Click here to clear the dataset</p>
+                    <input
+                        type='submit'
+                    />
+                </form>
+            </div>
+        </div>
+    )
 }
 
 export default App;
