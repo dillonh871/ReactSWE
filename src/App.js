@@ -27,8 +27,12 @@ function App() {
       [setUserStrings]
     );
 
+    function checkString(str){
+      return str != "";
+    }
+    
     function handleOnSubmit() {
-      let userStringArray = [...userStrings].filter(str => str != "");
+      let userStringArray = [...userStrings].filter(checkString);
 
       if(userStringArray.length == 0){
         alert("No Strings entered!");
