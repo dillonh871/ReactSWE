@@ -5,9 +5,18 @@
     text-align: center;
 }
 
-textarea {
-    width: 100px;
-    height: 500px;
+.container{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+textarea {
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 500px;
 }
