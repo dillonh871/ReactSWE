@@ -28,6 +28,17 @@ function App() {
       [setUserStrings]
     );
 
+    function handleWithReplacement(){
+      setWithReplacement(true); 
+      setWithoutReplacement(false);
+    }
+
+    function handleWithOutReplacement(){
+      setWithReplacement(false); 
+      setWithoutReplacement(true);
+    }
+
+
     function checkString(str){
       return str != "";
     }
@@ -89,8 +100,8 @@ function App() {
           </div>
 
           <div className = "buttons-container">
-            <label> <input type="radio" checked={withReplacement} onClick={() => { setWithReplacement(true); setWithoutReplacement(false); }} /> With Replacement </label>
-            <label> <input type="radio" checked={withoutReplacement} onClick={() => { setWithReplacement(false); setWithoutReplacement(true); }} /> Without Replacement </label>
+            <label> <input type="radio" checked={withReplacement} onClick={handleWithReplacement} /> With Replacement </label>
+            <label> <input type="radio" checked={withoutReplacement} onClick={handleWithOutReplacement} /> Without Replacement </label>
             <button onClick={handleOnSubmit}> Submit </button>
             <button onClick={handleOnReset}> Restart </button>
           </div>
