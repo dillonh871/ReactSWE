@@ -22,7 +22,7 @@ body {background-color: powderblue;}
     display: "flex"; 
     flex-Direction: "column";
     align-items: "center";
-    justify-Content: "center";
+    justify-content: "center";
 }
 
 .textbox{
