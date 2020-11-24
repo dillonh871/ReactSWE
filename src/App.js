@@ -101,12 +101,12 @@ function App() {
       <div>
         <h1 className="collab">Collaboration Summary</h1>
         <h3>
-          For this assignment Long and Faiz both took some time to do additonal research and practice with React because both of us did
-          not have much experience with it. After doing our own individual research and practice we both decided to split up the work
-          by having faiz work on the UI and Long work on the backend. After we finished our parts we both took some time to look
-          through each others code to see if their was anything we both needed to add in order to make the user experience better.
+          For this assignment Long and Faiz both took some time to do additonal research and practice with React because we both did
+          not have much experience with it. After doing our own individual research and practice we decided to split up the work
+          by having Faiz work on the UI and Long work adding functionality to the web app. After we finished our parts we both took some time to look
+          through each others code to see if there was anything we needed to improve upon in order to make the user experience better.
           This assignment was a very difficult yet rewarding assignment because it took both of us a lot of time to understand
-          the react as well as learning more javascript but after completing the assignment we were both very pleased with our end result.
+          how to use React as well as learning more javascript but after completing the assignment we were both very pleased with our end result.
         </h3>
       </div>
 
