@@ -34,9 +34,14 @@ function App() {
       <div className="container">
         <div className="sub-container">
 
-          <div className="textbox-one">
-            <div className="boxone-title">Enter string and click "save" to store it in the dataset</div>
+          <div className="textbox">
+            <div className="boxone-title">Enter Strings to be chosen</div>
             <textarea placeholder="Enter Strings here" value={userStrings.join("\n")} onChange={handleUserStringsChange} />
+          </div>
+
+          <div className="textbox">
+            <div className="box-title">String chosen: </div>
+            <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
           </div>
 
         </div>

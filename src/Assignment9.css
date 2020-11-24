@@ -16,13 +16,13 @@
     justify-content: space-evenly;
 }
 
-.textbox-one{
+.textbox{
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.boxone-title{
+.box-title{
     text-align: center;
 }
 
