@@ -40,9 +40,16 @@ function App() {
         return;
       }
 
-      let randomString = userStringArray[Math.floor(Math.random()*userStringArray.length)];
+      let randomStringIndex = Math.floor(Math.random()*userStringArray.length)
+      let randomString = userStringArray[randomStringIndex];
       setChosenString(randomString);
       setStringList([...stringList, randomString]);
+
+      if (withoutReplacement) {
+        let replacedArray = userStringArray;
+        delete replacedArray[randomStringIndex];
+        setWrittenStrings(replacedArray);
+      }
 
     }
 
