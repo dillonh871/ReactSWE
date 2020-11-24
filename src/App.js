@@ -76,9 +76,9 @@ function App() {
     }
 
   return (
-    <div className="main">
+    <div>
       <div className="title">
-      <h1>Assignment 9</h1>
+      <h1>XWE 432 Assignment 9</h1>
       <h2>Long Hoang and Faiz Zia</h2>
       </div>
 
