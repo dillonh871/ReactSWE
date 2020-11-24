@@ -9,11 +9,21 @@
     display: flex;
     justify-content: center;
 }
-.textbox{
+.sub-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.textbox-one{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxone-title{
+    text-align: center;
 }
 
 textarea {
