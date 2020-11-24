@@ -7,7 +7,7 @@ import Fetcher from './components/Fetcher';
 import Hooks, {aFunc} from './components/Hooks';
 import ToggleButtons from './components/ToggleButtons';
 
-class App extends Component {
+class App{
   state = { string: false }; //In place of constructor
 
   mySubmitHandler = (event) => {
