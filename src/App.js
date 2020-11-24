@@ -1,13 +1,14 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import React, { Component } from 'react';
 
 import './App.css';
 import Fetcher from './components/Fetcher';
 import Hooks, {aFunc} from './components/Hooks';
 import ToggleButtons from './components/ToggleButtons';
 
-class App{
+class App extends Component {
   state = { string: false }; //In place of constructor
 
   mySubmitHandler = (event) => {
