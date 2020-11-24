@@ -28,7 +28,7 @@ function App() {
     );
 
     function handleOnSubmit() {
-      let userStringArray = [userStrings].filter(str => str != "");
+      let userStringArray = [...userStrings].filter(str => str != "");
 
       if(userStringArray.length == 0){
         alert("No Strings entered!");
@@ -64,12 +64,12 @@ function App() {
             <div className="boxone-title">Enter Strings to be chosen
               <p>Separate multiple strings by new lines.</p>
             </div>
-            <textarea value={userStrings} onChange={handleUserStringsChange} />
+            <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
           </div>
 
           <div className="textbox">
             <div className="box-title">String chosen: {chosenString} </div>
-            <textarea value={userStrings} onChange={handleUserStringsChange} />
+            <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
             <div>
               <button onClick={clearStrings}> Clear Chosen Strings </button>
             </div>
