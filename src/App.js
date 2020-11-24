@@ -71,8 +71,9 @@ class App extends Component {
                   />
               </form>
           </div>
-          <div className="collab">
-            <h1>Collaboration Summary</h1>
+
+          <div>
+            <h1 className="collab">Collaboration Summary</h1>
             <h3>
               For this assignment Long and Faiz both took some time to do additonal research and practice with React because both of us did
               not have much experience with it. After doing our own individual research and practice we both decided to split up the work
@@ -82,6 +83,7 @@ class App extends Component {
               the react as well as learning more javascript but after completing the assignment we were both very pleased with our end result.
             </h3>
           </div>
+
         </div>
       )
     }
