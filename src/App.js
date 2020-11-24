@@ -17,60 +17,58 @@ export const getLocationUrlData = () => {
 export const servicePath ='/echo';
 
 function App(props) {
-  mySubmitHandler = (event) => {
-    event.preventDefault();
-    alert("You are saving " + this.state.string);
-}
-myChangeHandler = (event) => {
-    this.setState({ string: event.target.value });
-    //SAVE STRINGS
-}
-myChooseHandler = (event) => {
-    event.preventDefault();
-    //CHOOSE RANDOM
-}
-myClearHandler = (event) => {
-    event.preventDefault();
-    alert("You have cleared the dataset");
-    //CLEAR THE STORED
-}
-
-render() {
-    return (
-        <div>
-            <h1>Assignment 9</h1>
+mySubmitHandler = (event) => {
+        event.preventDefault();
+        alert("You are saving " + this.state.string);
+    }
+    myChangeHandler = (event) => {
+        this.setState({ string: event.target.value });
+        //SAVE STRINGS
+    }
+    myChooseHandler = (event) => {
+        event.preventDefault();
+        //CHOOSE RANDOM
+    }
+    myClearHandler = (event) => {
+        event.preventDefault();
+        alert("You have cleared the dataset");
+        //CLEAR THE STORED
+    }
+        return (
             <div>
-                <form onSubmit={this.mySubmitHandler}>
-                    <p>Enter string and click "save" to store it in the dataset</p>
-                    <input
-                        id="standard-string"
-                        label="String"
-                        type="text"
-                        onChange={this.myChangeHandler}
-                    />
-                    <input
-                        type='submit'
-                    />
-                </form>
+                <h1>Assignment 9</h1>
+                <div>
+                    <form onSubmit={this.mySubmitHandler}>
+                        <p>Enter string and click "save" to store it in the dataset</p>
+                        <input
+                            id="standard-string"
+                            label="String"
+                            type="text"
+                            onChange={this.myChangeHandler}
+                        />
+                        <input
+                            type='submit'
+                        />
+                    </form>
+                </div>
+                <div>
+                    <form onSubmit={this.myChooseHandler}>
+                        <p>Click here to choose a random string from the dataset</p>
+                        <input
+                            type='submit'
+                        />
+                    </form>
+                </div>
+                <div>
+                    <form onSubmit={this.myClearHandler}>
+                        <p>Click here to clear the dataset</p>
+                        <input
+                            type='submit'
+                        />
+                    </form>
+                </div>
             </div>
-            <div>
-                <form onSubmit={this.myChooseHandler}>
-                    <p>Click here to choose a random string from the dataset</p>
-                    <input
-                        type='submit'
-                    />
-                </form>
-            </div>
-            <div>
-                <form onSubmit={this.myClearHandler}>
-                    <p>Click here to clear the dataset</p>
-                    <input
-                        type='submit'
-                    />
-                </form>
-            </div>
-        </div>
-    )
+        );
 }
 
 export default App;
