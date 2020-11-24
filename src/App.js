@@ -18,6 +18,7 @@ function App() {
   const [withReplacement, setWithReplacement] = useState(false);
   const [withoutReplacement, setWithoutReplacement] = useState(true);
   const [chosenString, setChosenString] = useState("");
+  const [stringList, setStringList] = useState([""]);
     // state = { string: false }; //In place of constructor
 
     const handleUserStringsChange = useCallback(
@@ -30,7 +31,7 @@ function App() {
     function checkString(str){
       return str != "";
     }
-    
+
     function handleOnSubmit() {
       let userStringArray = [...userStrings].filter(checkString);
 
@@ -41,17 +42,19 @@ function App() {
 
       let randomString = userStringArray[Math.floor(Math.random()*userStringArray.length)];
       setChosenString(randomString);
-
+      setStringList([...stringList, randomString]);
 
     }
 
     function handleOnReset() {
       setUserStrings([""]);
       setChosenString("");
+      setStringList([""]);
     }
 
     function clearStrings() {
       setChosenString("")
+      setStringList([""]);
     }
 
   return (
@@ -73,7 +76,7 @@ function App() {
 
           <div className="textbox">
             <div className="box-title">String chosen: {chosenString} </div>
-            <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
+            <textarea value={stringList} />
             <div>
               <button onClick={clearStrings}> Clear Chosen Strings </button>
             </div>
