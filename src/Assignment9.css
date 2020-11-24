@@ -16,6 +16,13 @@
     justify-content: space-evenly;
 }
 
+.buttons-container{
+    display: "flex"; 
+    flex-Direction: "column";
+    align-items: "center";
+    justify-Content: "space-evenly";
+}
+
 .textbox{
     align-items: center;
     display: flex;

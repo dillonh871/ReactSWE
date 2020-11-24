@@ -15,6 +15,8 @@ import { useState, useCallback } from 'react';
 
 function App() {
   const [userStrings, setUserStrings] = useState([""]);
+  const [withReplacement, setWithReplacement] = useState(false);
+  const [withoutReplacement, setWithoutReplacement] = useState(true);
     // state = { string: false }; //In place of constructor
 
     const handleUserStringsChange = useCallback(
@@ -39,9 +41,19 @@ function App() {
             <textarea placeholder="Enter Strings here" value={userStrings.join("\n")} onChange={handleUserStringsChange} />
           </div>
 
+          <div className = "buttons-container">
+            <label> <input type="radio"  onClick={() => { setWithReplacement(true); setWithoutReplacement(false); }} /> With Replacement </label>
+            <label> <input type="radio"  onClick={() => { setWithReplacement(false); setWithoutReplacement(true); }} /> Without Replacement </label>
+            <button onClick={onSubmit}> Submit </button>
+            <button onClick={onReset}> Restart </button>
+          </div>
+
           <div className="textbox">
             <div className="box-title">String chosen: </div>
             <textarea value={userStrings.join("\n")} onChange={handleUserStringsChange} />
+            <div>
+              <button> Clear Chosen Strings </button>
+            </div>
           </div>
 
         </div>
